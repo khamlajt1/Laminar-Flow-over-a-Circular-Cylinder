@@ -1,0 +1,12 @@
+set  yr [-2000:3000]
+set  xr [0:100]
+set key bottom right
+set xlabel "Simulationtime [s]"
+set ylabel "dragCoeff [-]"
+set title "Plot of dragCoeff over simulationtime"
+set grid
+
+plot 	"./postProcessing/forceCoeffs/0/forceCoeffs.dat" using ($1):($3) with lines title "Drag Coefficient"
+	
+pause 1
+reread 

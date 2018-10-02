@@ -1,0 +1,12 @@
+set  yr [0:1500]
+set  xr [0:2]
+set key bottom right
+set xlabel "Simulationtime [s]"
+set ylabel "forceCoeff [-]"
+set title "Plot of forceCoeffs over simulationtime"
+set grid
+
+plot 	"./postProcessing/forceCoeffs/0/forceCoeffs.dat" using ($1):($4) with lines title "lift_coeff"
+
+pause 1
+reread 
